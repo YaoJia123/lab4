@@ -2,118 +2,149 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>定位展示知识点视图</title>
+    <title>新闻资讯网页</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        body {
             font-family: "微软雅黑", sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
         }
-
-        .knowledge-container {
-            position: relative;
-            width: 800px;
-            height: 600px;
-            margin: 20px auto;
-            border: 1px solid #eee;
-            background-color: #f9f9f9;
-        }
-
-        .center-icon {
-            position: relative;
-            width: 250px;
-            height: 250px;
-            margin: 200px auto 0;
-            z-index: 10;
-        }
-
-        .center-icon img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        .knowledge-card {
-            position: absolute;
-            width: 220px;
-            padding: 15px;
+        .container {
+            width: 1200px;
+            margin: 0 auto;
             background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 5;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        .card-top-left {
-            top: 50px;
-            left: 80px;
-        }
-
-        .card-bottom-left {
-            bottom: 80px;
-            left: 80px;
-        }
-
-        .card-bottom-right {
-            bottom: 80px;
-            right: 80px;
-        }
-
-        .knowledge-card h4 {
+        .page-title {
+            font-size: 24px;
             color: #333;
             margin-bottom: 10px;
-            font-size: 14px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
         }
-
-        .knowledge-card ul {
-            list-style-type: disc;
-            padding-left: 20px;
+        .divider {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+        .content-wrap {
+            display: flex;
+            gap: 30px;
+        }
+        .news-left {
+            flex: 2;
+        }
+        .news-right {
+            flex: 1;
+        }
+        .news-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .news-title {
+            font-size: 16px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .news-img-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .news-img {
+            width: 48%;
+            height: 120px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+        .news-author {
             font-size: 12px;
-            color: #666;
-            line-height: 1.8;
+            color: #999;
+        }
+        .hot-item {
+            margin-bottom: 25px;
+        }
+        .hot-item:last-child {
+            margin-bottom: 0;
+        }
+        .hot-title {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .hot-title a {
+            color: #333;
+            text-decoration: none;
+        }
+        .hot-title a:hover {
+            color: #f60;
+            text-decoration: underline;
+        }
+        .hot-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-    <div class="knowledge-container">
-        <div class="center-icon">
-            <img src=C:\Users\Administrator\Desktop\lab4-1-117-陈家民\image\lab1.png alt="中央图标">
-        </div>
+    <div class="container">
+        <h1 class="page-title">频道 科技 > 太空探测</h1>
+        <hr class="divider">
 
-        <div class="knowledge-card card-top-left">
-            <h4>HTML基础和HTML5</h4>
-            <ul>
-                <li>HTML标签与属性</li>
-                <li>HTML5多媒体（视频和音频）</li>
-                <li>HTML5图形标签</li>
-                <li>HTML5地理位置</li>
-                <li>HTML5表单</li>
-            </ul>
-        </div>
+        <div class="content-wrap">
+            <div class="news-left">
+                <div class="news-item">
+                    <h4 class="news-title">飞行了200多亿公里的旅行者1号，为何不会撞上太空中的小行星</h4>
+                    <div class="news-img-group">
+                        <img src="https://picsum.photos/id/1002/400/200" alt="新闻图片" class="news-img">
+                        <img src="https://picsum.photos/id/1003/400/200" alt="新闻图片" class="news-img">
+                    </div>
+                    <p class="news-author">作者：科技日报  2026-04-03</p>
+                </div>
+                <div class="news-item">
+                    <h4 class="news-title">欧洲探测器从4.2亿公里外传回多张照片</h4>
+                    <div class="news-img-group">
+                        <img src="https://picsum.photos/id/1004/400/200" alt="新闻图片" class="news-img">
+                        <img src="https://picsum.photos/id/1005/400/200" alt="新闻图片" class="news-img">
+                    </div>
+                    <p class="news-author">作者：环球科学  2026-04-02</p>
+                </div>
+                <div class="news-item">
+                    <h4 class="news-title">为什么太空没有氧气，陨石却能持续燃烧</h4>
+                    <div class="news-img-group">
+                        <img src="https://picsum.photos/id/1006/400/200" alt="新闻图片" class="news-img">
+                        <img src="https://picsum.photos/id/1008/400/200" alt="新闻图片" class="news-img">
+                    </div>
+                    <p class="news-author">作者：天文在线  2026-04-01</p>
+                </div>
+            </div>
 
-        <div class="knowledge-card card-bottom-left">
-            <h4>CSS基础和CSS3</h4>
-            <ul>
-                <li>CSS选择器</li>
-                <li>CSS样式与定位</li>
-                <li>CSS3 2D与3D转换</li>
-                <li>CSS3过渡与动画</li>
-                <li>CSS3边框效果</li>
-            </ul>
-        </div>
-
-        <div class="knowledge-card card-bottom-right">
-            <h4>JavaScript</h4>
-            <ul>
-                <li>数据类型</li>
-                <li>运算符</li>
-                <li>基础语法</li>
-                <li>DOM对象</li>
-                <li>JS特效</li>
-            </ul>
+            <div class="news-right">
+                <div class="hot-item">
+                    <h4 class="hot-title"><a href="#">研究表明：人类的自杀率为120万</a></h4>
+                    <img src="https://picsum.photos/id/1011/400/200" alt="热点图片" class="hot-img">
+                </div>
+                <div class="hot-item">
+                    <h4 class="hot-title"><a href="#">日晕出了不同晕彩，一个转了，基本一圈 立马干晕现场</a></h4>
+                    <img src="https://picsum.photos/id/1012/400/200" alt="热点图片" class="hot-img">
+                </div>
+                <div class="hot-item">
+                    <h4 class="hot-title"><a href="#">俗语“八月十二雨一淋，四季无收成”，一定是益虫</a></h4>
+                    <img src="https://picsum.photos/id/1013/400/200" alt="热点图片" class="hot-img">
+                </div>
+            </div>
         </div>
     </div>
 </body>
